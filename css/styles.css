@@ -13,6 +13,8 @@ License URI:http://www.gnu.org/licenses/gpl-2.0.html
 @import url(http://fonts.googleapis.com/css?family=Lato);
 @import url(http://fonts.googleapis.com/css?family=Allerta+Stencil);
 @import url(http://fonts.googleapis.com/css?family=Raleway:300);
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 /*-------------------------------------------------------------------------------------------------------------------------------*/
 /******* General ******/
@@ -1763,4 +1765,29 @@ footer, #footer{
 .carousel{
   top: 0;
   margin-bottom: 0;
+}
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/******* Typography Update: Lora (body/subheading) + Montserrat (titles/headers) ******/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Body copy & subheadings -> Lora */
+body,
+p,
+li,
+p.text-center.sub-text,
+p.img-card,
+.testimonials-carousel-content p {
+	font-family: 'Lora', serif;
+}
+
+/* Titles & section headers -> Montserrat */
+h1, h2, h3, h4, h5, h6,
+.main-text,
+.header-text,
+.header-text span,
+h3.titleimg-card,
+.widget-title,
+.testimonials-name,
+.testimonials-title {
+	font-family: 'Montserrat', sans-serif;
 }
