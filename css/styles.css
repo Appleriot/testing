@@ -1444,18 +1444,18 @@ footer{
    selector more than once (e.g. inside a media query).
 
    Palette:
-   --maroon  #391212  darkest — was #354b5e / #666 (text), #395B71 (footer)
-   --rust    #74342B  primary — was #68ABBB / #6CA8D1 / #2494A0 / #0C93B2 /
-                                  #41657C / #6799A0 / #428bca / #287676 / #0A5175
-   --cream   #EDDBC2  background / light text on dark
-   --blue    #8FA4D1  accent/hover — was #8BC3A3 / #31A1AC
+   --maroon  #333D6D  primary text / trust — was #BE1A1A (dark surfaces / body text)
+   --rust    #723EC3  headings / CTAs — was #D0311E (large text sections: headings,
+                                  h3 titles, testimonial names, tab labels)
+   --cream   #FFF0D9  background — was #F8EBAB (background / light text on dark)
+   --blue    #FFCF95  warm accent / hover — was #F7D87F
    ============================================ */
 
 :root{
-  --maroon:#391212;
-  --rust:#74342B;
-  --cream:#EDDBC2;
-  --blue:#8FA4D1;
+  --maroon:#333D6D;
+  --rust:#723EC3;
+  --cream:#FFF0D9;
+  --blue:#FFCF95;
 }
 
 /* ---------- General / body ---------- */
@@ -1547,13 +1547,13 @@ li.selected a{
   }
 }
 .carousel-caption{
-  background: rgba(57, 18, 18, 0.55);
+  background: rgba(51, 61, 109, 0.55);
   color: var(--cream);
 }
 
 /* ---------- Fun facts / milestone counters (collection.html) ---------- */
 .milestone-counter{
-  background: rgba(57, 18, 18, 0.55) !important;
+  background: rgba(51, 61, 109, 0.55) !important;
 }
 .highlight{ color: var(--cream); }
 .milestone-details{ color: var(--cream); }
@@ -1562,6 +1562,11 @@ li.selected a{
 /* ---------- Donation buttons ---------- */
 .btn-block{
   background: var(--rust);
+  color: var(--cream);
+}
+.btn-block:hover,
+.btn-block:focus{
+  color: var(--cream);
 }
 .btn-tertiary{
   background: var(--rust);
@@ -1790,4 +1795,28 @@ h3.titleimg-card,
 .testimonials-name,
 .testimonials-title {
 	font-family: 'Montserrat', sans-serif;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/******* Full-width flush banner image (about.html) ******/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+.full-width-img {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	line-height: 0;
+	border-top: 4px solid var(--rust);
+	border-bottom: 4px solid var(--rust);
+}
+.full-width-img img {
+	width: 100%;
+	height: 420px;
+	object-fit: cover;
+	object-position: center;
+	display: block;
+}
+@media (max-width: 768px) {
+	.full-width-img img {
+		height: 260px;
+	}
 }
